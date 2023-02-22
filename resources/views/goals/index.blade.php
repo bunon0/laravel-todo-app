@@ -34,7 +34,7 @@
                             <div class="d-flex align-items-center">
                                 <div class="dropdown">
                                     <a href="#"
-                                        class="dropdown-toggle px-1 fs-5 fw-bold link-dark text-decoration-none"
+                                        class="dropdown-toggle px-1 fs-5 fw-bold link-dark text-decoration-none menu-icon"
                                         id="dropdownGoalMenuLink" role="button" data-bs-toggle="dropdown"
                                         aria-expanded="false">︙</a>
                                     <ul class="dropdown-menu dropdown-menu-end text-center"
