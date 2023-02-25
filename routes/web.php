@@ -19,10 +19,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 Auth::routes();
 
-Route::get('/', [GoalController::class, 'index']);
-Route::resource('/goals', GoalController::class)->only([
-    'index',
-    'store',
-    'update',
-    'destroy',
-]);
+Route::get('/', [GoalController::class, 'index'])->middleware('auth');
+Route::resource('/goals', GoalController::class)
+    ->only(['index', 'store', 'update', 'destroy'])
+    ->middleware('auth');
