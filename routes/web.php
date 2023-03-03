@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GoalController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\TodoController;
 use App\Models\Goal;
 use Illuminate\Support\Facades\Auth;
@@ -22,9 +23,15 @@ Auth::routes();
 
 Route::get('/', [GoalController::class, 'index'])->middleware('auth');
 Route::resource('/goals', GoalController::class)
-    ->only(['index', 'store', 'update', 'destroy'])
-    ->middleware('auth');
+  ->only(['index', 'store', 'update', 'destroy'])
+  ->middleware('auth');
 
 Route::resource('/goals.todos', TodoController::class)
-    ->only(['store', 'update', 'destroy'])
-    ->middleware('auth');
+  ->only(['store', 'update', 'destroy'])
+  ->middleware('auth');
+
+Route::resource('/tags', TagController::class)->only([
+  'store',
+  'update',
+  'destroy',
+]);
