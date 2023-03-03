@@ -15,7 +15,7 @@
   <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
   {{-- Styles --}}
-  @stack('styles');
+  @stack('styles')
 
   <!-- Scripts -->
   @vite(['resources/sass/app.scss', 'resources/js/app.js'])
